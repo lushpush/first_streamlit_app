@@ -1,5 +1,6 @@
 import streamlit 
 import pandas
+import requests
 
 streamlit.title("My Parents new healthy Diner!")
 streamlit.header("Breakfast Menu")
@@ -16,7 +17,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 streamlit.sidebar.markdown("first page")
 streamlit.sidebar.markdown("second page")
-streamlit.sidebar.markdown("Third page")import requests
+streamlit.sidebar.markdown("Third page")
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruityvice_response)
 
